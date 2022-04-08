@@ -13,7 +13,6 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX/2;
-	printf("%d\n%li\n", RAND_MAX, time(0));
 
 	if(n == 0)
 		printf("%d is zero\n", n);
