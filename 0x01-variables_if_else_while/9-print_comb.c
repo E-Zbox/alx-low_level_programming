@@ -11,10 +11,9 @@ int main(void)
 
 	for(single_num = 0; single_num < 10; single_num++)
 	{
-		if (single_num == 9)
-			putchar("\i", single_num);
-		else
-			putchar("\i, ", single_num);
+		putchar(single_num + '0');
+		if (single_num < 9)
+			putchar(', ');
 	}
 
 	putchar('\n');
