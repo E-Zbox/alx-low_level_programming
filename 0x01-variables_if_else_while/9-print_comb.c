@@ -13,7 +13,10 @@ int main(void)
 	{
 		putchar(single_num + '0');
 		if (single_num < 9)
-			putchar(', ');
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 
 	putchar('\n');
