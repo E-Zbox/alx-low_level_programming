@@ -2,7 +2,7 @@
 
 /**
  * _islower - checks if character has lower case
- * @count: int 
+ * @count: int
  *
  * Return: Always 0||1 (Success)
  */
