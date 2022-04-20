@@ -1,3 +1,4 @@
+#include "string.h"
 #include "main.h"
 
 /**
@@ -8,7 +9,7 @@
  */
 int _strlen(char *s)
 {
-	int stringSize = sizeof(s);
+	int stringSize = strlen(s);
 
 	return stringSize;
 }
