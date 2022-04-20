@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "main.h"
 
 /**
@@ -10,7 +11,7 @@
 void _puts(char *str)
 {
 	int count, len;
-	len = _strlen(str);
+	len = strlen(str);
 
 	for (count = 0; count < len; count++)
 		putchar(str[count]);
