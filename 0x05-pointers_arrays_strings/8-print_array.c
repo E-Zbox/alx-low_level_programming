@@ -9,9 +9,9 @@
  */
 void print_array(int *a, int n)
 {
-	int arrayLength = sizeof(a) / 4;
+	int count;
 
-	for (int count = 0; count < n; count++)
+	for (count = 0; count < n; count++)
 	{
 		if (count == n - 1)
 		{
@@ -19,6 +19,6 @@ void print_array(int *a, int n)
 			break;
 		}
 
-		printf("%c, ", *a[count]);
+		printf("%c, ", *(a + count));
 	}
 }
