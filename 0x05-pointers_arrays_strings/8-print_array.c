@@ -19,7 +19,7 @@ void print_array(int *a, int n)
 		{
 			if (count == n - 1)
 			{
-				printf("%d\n", *a);
+				printf("%d", *a);
 				break;
 			}
 
