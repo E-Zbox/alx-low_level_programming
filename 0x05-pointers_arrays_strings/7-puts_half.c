@@ -14,10 +14,14 @@ void puts_half(char *str)
 
 	strHalfLength = strlen(str) / 2;
 
+	char str_copy[strHalfLength * 2];
+	strcpy(str_copy, str);
+
 	while (count <= strHalfLength)
 	{
-		putchar(*str);
-		str++;
+		putchar(str_copy[count]);
 		count++;
 	}
+
+	putchar('\n');
 }
