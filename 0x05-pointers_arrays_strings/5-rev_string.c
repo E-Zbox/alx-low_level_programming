@@ -10,9 +10,10 @@
 void rev_string(char *s)
 {
 	int count, len;
-	char *string;
 
 	len = strlen(s);
+
+	char string[len - 1];
 
 	/* create a copy of string 's' */
 	for (count = 0; count < len; count++)
