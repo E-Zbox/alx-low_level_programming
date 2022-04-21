@@ -10,11 +10,12 @@
  */
 void puts_half(char *str)
 {
-	int count, strHalfLength;
+	int count, strHalfLength, strLength;
 
-	strHalfLength = strlen(str) / 2;
+	strLength = strlen(str);
+	strHalfLength = strLength / 2;
 
-	char str_copy[strHalfLength * 2];
+	char str_copy[strLength];
 	strcpy(str_copy, str);
 
 	while (count <= strHalfLength)
