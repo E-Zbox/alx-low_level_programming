@@ -15,7 +15,7 @@ void puts_half(char *str)
 	strLength = strlen(str);
 	strHalfLength = strLength / 2;
 
-	char str_copy[strLength];
+	char str_copy[100];
 	strcpy(str_copy, str);
 
 	while (count <= strHalfLength)
