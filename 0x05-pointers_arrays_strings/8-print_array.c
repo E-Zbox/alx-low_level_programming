@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include "main.h"
 
 /**
@@ -10,22 +9,16 @@
  */
 void print_array(int *a, int n)
 {
-	int str_len = strlen(a);
-	char str_copy[20];
-
-	strcpy(str_copy, a);
+	int arrayLength = sizeof(a) / 4;
 
 	for (int count = 0; count < n; count++)
 	{
-		if (count == (str_len - 1))
+		if (count == n - 1)
 		{
-			printf("%c\n", str_copy[count]);
+			printf("%c\n", *(a + count));
 			break;
 		}
-		else
-		{
-			printf("%c, ", str_copy[count]);
-		}
-	}
 
+		printf("%c, ", *a[count]);
+	}
 }
