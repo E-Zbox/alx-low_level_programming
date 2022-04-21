@@ -9,9 +9,8 @@
  */
 void rev_string(char *s)
 {
-	int count, len;
-
-	len = strlen(s);
+	int count;
+	int len = strlen(s);
 
 	char string[len], string2[len];
 
