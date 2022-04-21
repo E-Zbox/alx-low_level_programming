@@ -13,12 +13,12 @@ void rev_string(char *s)
 
 	len = strlen(s);
 
-	char string[], string2[];
+	char string[len], string2[len];
 
 	/* create a copy of string 's' */
 	strcpy(string, s);
 
-	for (count = 0; count < len; count--)
+	for (count = 0; count < len; count++)
 	{
 		string2[count] = string[len - count - 1];
 	}
