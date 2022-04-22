@@ -4,7 +4,7 @@
 
 #### Tasks
 
-### 0. strcat
+## 0. strcat
 
 Write a function that concatenates two strings
 
@@ -16,7 +16,7 @@ Write a function that concatenates two strings
 
 FYI: The standard library provides a similar function: `strcat`. Run `man` `strcat` to learn more.
 
-### 1. stncat
+## 1. stncat
 
 **File:`1-strncat.c`**
 
@@ -30,7 +30,7 @@ Write a function that concatenates two strings
 
 FYI: The standard library provides a similar function: strncat. Run man strncat to learn more.
 
-### 7. Mozart composed his music not for the elite, but for everybody
+## 7. Mozart composed his music not for the elite, but for everybody
 
 **File: `7-leet.c`**
 
