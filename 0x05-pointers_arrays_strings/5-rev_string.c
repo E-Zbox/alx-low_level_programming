@@ -10,17 +10,29 @@
 void rev_string(char *s)
 {
 	int count;
-	int len = strlen(s);
-
-	char string[len], string2[len];
+	int len = 0;
+	char *string;
 
 	/* create a copy of string 's' */
-	strcpy(string, s);
+	string = s;
 
-	for (count = 0; count < len; count++)
+	while (*s != '\0')
 	{
-		string2[count] = string[len - count - 1];
+		s++;
+		len++;
+	}
+
+	char string1[len], string2[len];
+
+	/* create another copy of string 's' */
+	strcpy(string1, string);
+
+	len--;
+	for (count = 0; count <= len; count++)
+	{
+		string2[count] = string1[len - count];
 	}
 
 	strcpy(s, string2);
+	strcpy(string, string2);
 }
