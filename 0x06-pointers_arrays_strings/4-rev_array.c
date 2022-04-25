@@ -15,7 +15,6 @@ void reverse_array(int *a, int n)
 	for (; count < n; count++)
 		array_copy[count] = *(a + count);
 
-	for (count = (n -1); count >= 0; count--)
-		*(a + count) = array_copy[n - count -1];
-
+	for (count = (n - 1); count >= 0; count--)
+		*(a + count) = array_copy[n - count - 1];
 }

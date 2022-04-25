@@ -17,5 +17,5 @@ char *string_toupper(char *_char)
 			_char[count] -= delta;
 	}
 
-	return _char;
+	return (_char);
 }

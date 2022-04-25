@@ -6,7 +6,7 @@
  * and then adds a terminating null byte
  * @dest: string literal
  * @src: string literal
- * 
+ *
  * Return: Always char *
  */
 char *_strcat(char *dest, char *src)
@@ -19,5 +19,6 @@ char *_strcat(char *dest, char *src)
 
 	dest[len_dest + count] = '\0';
 
-	return dest;
+	return (dest);
 }
+

@@ -21,5 +21,5 @@ char *_strncat(char *dest, char *src, int n)
 
 	dest[len_dest + count] = '\0';
 
-	return dest;
+	return (dest);
 }
