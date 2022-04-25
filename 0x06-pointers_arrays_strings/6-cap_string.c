@@ -13,7 +13,7 @@ char *cap_string(char *_str)
 
 	for (; _str[count]; count++)
 	{
-		if (((_str[count - 1] == ' ') || (_str[count - 1] == 10)) && ((_str[count] >= 'a') && (_str[count] <= 'z')))
+		if (((_str[count - 1] == ' ') || (_str[count - 1] == '\t') || (_str[count - 1] == '\n')) && ((_str[count] >= 'a') && (_str[count] <= 'z')))
 			_str[count] -= delta;
 	}
 
