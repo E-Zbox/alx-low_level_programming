@@ -1,23 +1,41 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * cap_string - capitalizes all words of a string
  * @_str: string literal
  *
  * Return: string literal
  */
-char *cap_string(char *_str)
+char *cap_string(char *string)
 {
-	int count = 1;
 	int delta = 'a' - 'A';
 
-	_str[0] -= delta;
+	char *separators = " \n\t,;.!?\"(){}";
+	int count = 0;
+	int index;
+	int len_separators = 0;
 
-	for (; _str[count]; count++)
+	while (separators[len_separators])
 	{
-		if (((_str[count - 1] == ' ') || (_str[count - 1] == '\t') || (_str[count - 1] == '\n') || (_str[count - 1] == '.')) && ((_str[count] >= 'a') && (_str[count] <= 'z')))
-			_str[count] -= delta;
+		len_separators++;
+	};
+
+	for (; string[count] != '\0'; count++)
+	{
+		if (count == 0 && string[count] >= 'a' && string[count] <= 'z')
+			string[count] -= delta;
+
+		for (index = 0; index < len_separators; index++)
+		{
+			if (string[count - 1] == separators[index])
+			{
+				if (string[count] >= 'a' && string[count] <= 'z')
+				{
+					string[count] -= delta;
+				}
+			}
+		}
 	}
 
-	return (_str);
+	return (string);
 }
