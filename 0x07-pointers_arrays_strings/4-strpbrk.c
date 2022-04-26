@@ -24,10 +24,12 @@ char *_strpbrk(char *s, char *accept)
 		for (index2 = 0; index2 < len_accept; index2++)
 		{
 			if (accept[index2] == s[index1])
-				first_occurrence = first_occurrence > (s + index1) ? (s + index1) : first_occurrence;
+			{
+				if (first_occurrence > (s + index1))
+					first_occurrence = s + index1;
+			}
 		}
 	}
 
 	return (first_occurrence);
 }
-
