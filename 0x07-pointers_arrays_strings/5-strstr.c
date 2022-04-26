@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _strstr - locates a substring
  * @haystack: string literal
@@ -26,10 +25,10 @@ char *_strstr(char *haystack, char *needle)
 				{
 					if (count != (len_needle - 1))
 						count++;
-				}
-				else if (count == (len_needle - 1))
-				{
-					return (haystack + index1);
+					else if (count == (len_needle - 1))
+					{
+						return (haystack + index1);
+					}
 				}
 				else
 				{
