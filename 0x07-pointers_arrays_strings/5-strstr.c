@@ -22,9 +22,10 @@ char *_strstr(char *haystack, char *needle)
 		{
 			for (index2 = 0; index2 < len_needle; index2++)
 			{
-				if ((needle[index2] == haystack[index1 + count]) && (count != (len_needle - 1)))
+				if (needle[index2] == haystack[index1 + count])
 				{
-					count++;
+					if (count != (len_needle - 1))
+						count++;
 				}
 				else if (count == (len_needle - 1))
 				{
