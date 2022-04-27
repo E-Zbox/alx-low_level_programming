@@ -18,10 +18,12 @@ void print_diagsums(int *a, int size)
 	int index2 = 0;
 	int num;
 
+	/*
 	printf("%p\n", (void *)a);
 	printf("%p => %d\n", (void *)(a + size), *(a + size));
 
 	printf("%d\n", *(a + 3));
+	*/
 
 	for (; index1 < size; index1++)
 	{
