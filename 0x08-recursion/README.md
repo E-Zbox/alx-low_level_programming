@@ -9,11 +9,11 @@
 
 ### Description
 
-Nobody:
+_Nobody_:
 
-Absolutely Nobody:
+_Absolutely Nobody_:
 
-mazi Eben 🦸‍♂️: I am not a wizard🧙‍♂️ but I can show you some tricks ✨⚕
+_mazi Eben_ 🦸‍♂️: I am not a wizard🧙‍♂️ but I can show you some tricks ✨⚕
 
 ### Learning Objectives
 
