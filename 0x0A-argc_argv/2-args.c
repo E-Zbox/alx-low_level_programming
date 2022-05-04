@@ -9,7 +9,7 @@
  */
 int main(int argc, char **argv)
 {
-	int index = 1;
+	int index = 0;
 
 	for (; index < argc; index++)
 		printf("%s\n", argv[index]);
