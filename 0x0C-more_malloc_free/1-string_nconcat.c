@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -21,6 +20,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
+	index = 0;
 	len_strings[0] = 0;
 	len_strings[1] = 0;
 
@@ -34,15 +34,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len_newString = (len_strings[0] + len_strings[1]) * sizeof(char) + 1;
 	newString = malloc(len_newString);
 
-	printf("Got here -> len_newString = %d -> len_strings[0, 1] => %d, %d\n", len_newString, len_strings[0], len_strings[1]);
-
 	if (newString == NULL)
 		return (NULL);
 
-	printf("newString is not null\n");
-
 	for (; index <= len_strings[0]; index++)
+	{
 		newString[index] = s1[index];
+	}
 
 	index = 0;
 
@@ -50,8 +48,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		newString[len_strings[0] + index] = s2[index];
 
 	newString[len_newString] = '\0';
-
-	printf("newString => %s\n", newString);
 
 	return (newString);
 }
