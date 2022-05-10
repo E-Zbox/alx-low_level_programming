@@ -31,25 +31,25 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		len_strings[1]++;
 
 	len_strings[1] = n < len_strings[1] ? n : len_strings[1];
-	
-	len_newString = (len_strings[0] + len_strings[1]) * sizeof(char) + 1;
-	
+
+	len_newString = ((len_strings[0] + len_strings[1]) * sizeof(char)) + 1;
+
 	newString = malloc(len_newString);
 
 	if (newString == NULL)
 		return (NULL);
 
-	for (; index <= len_strings[0]; index++)
+	for (; index < len_strings[0]; index++)
 	{
 		newString[index] = s1[index];
 	}
 
 	index = 0;
 
-	for (; index <= len_strings[1]; index++)
+	for (; index < len_strings[1]; index++)
 		newString[len_strings[0] + index] = s2[index];
 
-	newString[len_newString] = '\0';
+	newString[len_strings[0] + index] = '\0';
 
 	return (newString);
 }
