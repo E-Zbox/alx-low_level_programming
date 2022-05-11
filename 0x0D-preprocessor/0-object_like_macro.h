@@ -1,5 +1,5 @@
-#ifndef 0_HEADER_FILE
-#define 0_HEADER_FILE
+#ifndef OBJECT_LIKE_MACRO
+#define OBJECT_LIKE_MACRO
 
 #define SIZE 1024
 
