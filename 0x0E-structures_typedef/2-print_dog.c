@@ -19,7 +19,7 @@ void print_property(char *s)
 /**
  * print_fproperty - print the value passed
  * if NULL prints (nill)
- * @s: float *
+ * @d: float *
  *
  * Return: void
  */
