@@ -1,3 +1,4 @@
+#include <string.h>
 #include <stdlib.h>
 #include "dog.h"
 #include "main.h"
@@ -12,8 +13,14 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char __attribute__((unused)) *name_copy = name;
-	char __attribute__((unused)) *owner_copy = owner;
+	char __attribute__((unused)) *name_copy;
+	char __attribute__((unused)) *owner_copy;
+
+	name_copy = malloc(sizeof(char) * strlen(name));
+	strcpy(name_copy, name);
+
+	owner_copy = malloc(sizeof(char) & strlen(owner));
+	strcpy(owner_copy, owner);
 
 	dog_t *nkita = malloc(sizeof(dog_t));
 
