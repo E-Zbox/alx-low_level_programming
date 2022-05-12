@@ -16,7 +16,7 @@ struct dog
 	char *owner;
 };
 
-void print_dog(struct dog *d);
+/** void print_dog(struct dog *d); */
 
 typedef struct dog dog_t;
 
