@@ -13,7 +13,7 @@ int recursive_print(const list_t *h)
 
 	if (h->str == NULL)
 	{
-		printf("[%d] %s\n", h->len, h->str);
+		printf("[0] (nil)\n");
 		return (recursive_print(h->next) + count);
 	}
 
@@ -35,8 +35,9 @@ int recursive_print(const list_t *h)
  */
 size_t print_list(const list_t *h)
 {
-	int count = 0;
+	int count __attribute__((unused)) = 0;
 
 	count = recursive_print(h);
 
-	return (ount);
+	return (count);
+}
