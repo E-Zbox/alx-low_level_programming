@@ -14,7 +14,7 @@ size_t listint_len(const listint_t *h)
 	if (h == NULL)
 		return (count);
 
-	++ count;
+	++count;
 
 	if ((*h).next == NULL)
 		return (count);
