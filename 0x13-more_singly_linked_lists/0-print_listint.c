@@ -9,6 +9,7 @@
 size_t print_listint(const listint_t *h)
 {
 	int count = 0;
+
 	listint_t *_next __attribute__((unused));
 
 	if (h == NULL)
