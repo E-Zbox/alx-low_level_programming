@@ -12,6 +12,9 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	listint_t *target_node __attribute__((unused));
 	unsigned int count = 0;
 
+	if (head == NULL)
+		return (NULL);
+
 	target_node = head;
 
 	for (; (target_node->next != NULL); count++)
