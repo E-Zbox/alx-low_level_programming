@@ -10,9 +10,15 @@ void free_listint(listint_t *head)
 {
 	if (head != NULL)
 	{
-		free(head);
+		while (head->next != NULL)
+		{
+			free(head);
+			head = head->next;
 
-		if ((*head).next != NULL)
-			free_listint((*head).next);
+			/**
+			if ((*head).next != NULL)
+				free_listint((*head).next);
+				*/
+		}
 	}
 }
