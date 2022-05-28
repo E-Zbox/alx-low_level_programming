@@ -16,14 +16,11 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 
 	for (; (target_node->next != NULL); count++)
 	{
-		printf("index ( %d ), count ( %d )\n", index, count);
 		if (count == index)
 			return (target_node);
 
 		target_node = target_node->next;
 	}
-
-	printf("count (after for loop) => %d\n", count);
 
 	if (target_node->next == NULL)
 	{
