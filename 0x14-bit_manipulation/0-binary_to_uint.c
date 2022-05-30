@@ -17,11 +17,16 @@ int _exp(int base, unsigned int power)
 	return (result);
 }
 
+/**
+ * binary_to_uint - converts a binary to an unsigned int
+ * @b: char *(pointing to a string of 0 and 1 chars
+ *
+ * Return: unsigned int
+ */
 unsigned int binary_to_uint(const char *b)
 {
-	int len_b = 0;
+	unsigned int len_b = 0, num;
 	unsigned int index = 0, result = 0;
-	unsigned int num;
 
 	if (b == NULL)
 		return (0);
@@ -35,7 +40,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		num = *(b + index) - '0';
 
-		if (num != 0 || num != 1)
+		if (num != 0 && num != 1)
 			return (0);
 
 		result += num * _exp(2, len_b - index);
