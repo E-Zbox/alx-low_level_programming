@@ -1,4 +1,4 @@
-# 0x14. C - Bit manipulation
+# 0x14. C - Bit manipulation 💻
 
 ### Table of Contents
 -	[Learning Objectives](#learning-objectives)
@@ -11,7 +11,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 -	Look for the right source of information without too much help
 -	How to manipulte **Bits** and use **Bitwise operators**
 
-## Table showing how Bitwise operators work
+## Table showing how Bitwise operators work 💻
 ![bitwise-operators](./screenshots/bitwise.png)
 
 ### Tasks
@@ -37,4 +37,4 @@ Write a function that returns the number of bits you would need to flip to get f
 
 **File: `5-flip_bits.c`**
 
-### Feel free to PERUSE through this repository and see why develops use Bitwise concepts to save memory
+### Feel free to PERUSE through this repository and see why developers use Bitwise concepts to save memory 💻
