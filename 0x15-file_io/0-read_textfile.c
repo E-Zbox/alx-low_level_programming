@@ -12,7 +12,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char c __attribute__((unused));
 	int fd __attribute__((unused));
-	int count __attribute__((unused));
+	unsigned int count __attribute__((unused));
 	int bytes __attribute__((unused));
 
 	if (filename == NULL)
@@ -25,11 +25,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	count = 0;
 
-	while ((bytes = read(fd, &c, sizeof(c))) > 0)
+	while (((bytes = read(fd, &c, sizeof(c))) > 0) && (count < letters))
 	{
-		write(fd, &c, sizeof(c));
+		write(1, &c, sizeof(c));
 		count++;
 	}
+
+	close(fd);
 
 	return (count);
 }
