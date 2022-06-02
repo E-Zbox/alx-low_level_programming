@@ -14,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char c __attribute__((unused));
 	int fd __attribute__((unused));
 	int bytes __attribute__((unused));
-	unsigned int count __attribute__((unused));
+	unsigned int count;
 
 	if (filename == NULL)
 		return (0);
