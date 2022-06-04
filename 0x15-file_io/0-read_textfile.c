@@ -11,10 +11,9 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char c __attribute__((unused));
+	char *buf __attribute__((unused));
 	int fd __attribute__((unused));
-	int bytes __attribute__((unused));
-	unsigned int count;
+	int read_count, write_count;
 
 	if (filename == NULL)
 		return (0);
@@ -24,15 +23,29 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 
-	count = 0;
+	buf = malloc(sizeof(char) * letters);
 
-	while (((bytes = read(fd, &c, sizeof(c))) > 0) && (count < letters))
+	if (buf == NULL)
+		return (0);
+
+	read_count = read(fd, buf, letters);
+
+	if (read_count == -1)
 	{
-		write(1, &c, sizeof(c));
-		count++;
+		free(buf);
+		return (0);
 	}
 
+	write_count = write(1, buf, read_count);
+
+	if (write_count == -1 || read_count != write_count)
+	{
+		free(buf);
+		return (0);
+	}
+
+	free(buf);
 	close(fd);
 
-	return (count);
+	return (write_count);
 }
